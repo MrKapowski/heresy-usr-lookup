@@ -1,0 +1,16 @@
+---
+permalink: rules.json
+---
+
+[ {% for rule in rules %}
+    {
+        "id":"{{rule.name | slugify}}",
+        "name":"{{ rule.name }}",
+        "description":{{ rule.description | md }},
+        "link":"/rules/{{rule.name | slugify}}/",
+        "source":"{{rule.source}}",
+        "source-ref":{{rule.source-ref}},
+        "version":{{rule.version}},
+        "errata":{{rule.errata}}
+    }{% unless forloop.last%},{% endunless %}
+{% endfor %} ]

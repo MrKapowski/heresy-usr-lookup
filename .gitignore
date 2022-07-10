@@ -1,0 +1,18 @@
+node_modules
+# dependecies installed by npm
+node_modules
+
+# build artefacts
+_site
+dist
+
+# secrets
+.env
+
+# logs
+*.log
+report.html
+
+# cache
+.eslintcache
+.stylelintcache

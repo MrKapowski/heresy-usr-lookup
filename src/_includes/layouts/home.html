@@ -1,0 +1,109 @@
+{% layout "layouts/base.html" %} {% block content %}
+<main id="main-content" tabindex="-1">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <h1 class="text-2xl font-bold leading-tight text-gray-900">
+      {{ intro.title }}
+    </h1>
+  </div>
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <div class="py-8 leading-8 text-gray-600">
+      <p class="leading-6">{{ intro.desc }}</p>
+    </div>
+  </div>
+
+  <div x-data="setup()" x-init="init">
+    <div class="flex justify-center">
+      <div class="mb-3 xl:w-96">
+        <div
+          class="input-group relative mb-4 flex w-full flex-wrap items-stretch"
+        >
+          <input
+            type="search"
+            class="form-control relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="button-addon2"
+            x-model="search"
+          />
+          <!-- <button
+            class="btn inline-block flex items-center rounded bg-blue-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg"
+            type="button"
+            id="button-addon2"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="search"
+              class="w-4"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+              ></path>
+            </svg>
+          </button> -->
+        </div>
+      </div>
+    </div>
+    <template x-for="rule in sortedRules()">
+      <article x-bind:id="rule.id">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <h1
+            class="text-3xl font-bold leading-tight text-gray-900"
+            x-text="rule.name"
+          ></h1>
+        </div>
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="prose prose-lg py-8 leading-8 text-gray-600"
+            x-html="rule.description"
+          ></div>
+          <a x-bind:href="rule.link">Bookmark</a>
+        </div>
+      </article>
+    </template>
+  </div>
+</main>
+<script>
+  function setup() {
+    return {
+      rules: [],
+      loading: false,
+      source: '/rules.json',
+      search: null,
+      sortedRules() {
+        const sorted = this.rules.sort((first, second) => {
+          return first.name < second.name
+            ? -1
+            : first.name > second.name
+            ? 1
+            : 0;
+        });
+        if (this.search) {
+          console.log(`search: ${this.search}`);
+          return sorted.filter((item) =>
+            item.name.toLowerCase().startsWith(this.search.toLowerCase()),
+          );
+        }
+        return sorted;
+      },
+      get(source) {
+        this.loading = true;
+        const request = fetch(source)
+          .then((res) => res.json())
+          .then((data) => {
+            this.loading = false;
+            this.rules = data;
+          });
+      },
+      init() {
+        this.get(this.source);
+      },
+    };
+  }
+</script>
+{% endblock %}
