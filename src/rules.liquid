@@ -9,7 +9,7 @@ permalink: rules.json
         "description":{{ rule.description | md }},
         "link":"/rules/{{rule.name | slugify}}/",
         "source":"{{rule.source}}",
-        "source-ref":{{rule.source-ref}},
+        "page":{{rule.page}},
         "version":{{rule.version}},
         "errata":{{rule.errata}}
     }{% unless forloop.last%},{% endunless %}

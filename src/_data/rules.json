@@ -1,17 +1,257 @@
 [
   {
-    "name": "Shred (X)",
-    "description": "test\n\ntest\n\ntest",
-    "source": "Main Rulebook",
-    "source-ref": 164,
+    "name": "Adamantium Will (X+)",
+    "description": "Models with the Adamantium Will special rule gain an Invulnerable Save against any Wound inflicted by a weapon with the Force or Psychic Focus special rules and Wounds inflicted by Perils of the Warp -- the value of this save is indicated in brakets after the rule.",
+    "source": "Age of Darkness Rulebook",
+    "page": 231,
     "version": 1,
     "errata": false
   },
   {
-    "name": "Breaching (X)",
+    "name": "Armourbane (X)",
+    "description": "If a model or weapon has this special rule, it rolls an additional D6 for armour penetration when targetting a Vehicle model, or, when targetting a model with the Automata or Dreadnought Unit Type, re-rolls To Wound Instead. These effects apply to both Shooting and close combat attacks.\n\nSome instances of the Armourbane special rule may include a quilifier after the rule in brackets. These variant rules are described below.\n\n**Armourbane (Melta)**: A model or weapone with this Armourbane rule only gains the benefits of the Armourbane special rule when at half range or less. If the attack is more then half its Maximum Range away, it rolls to penetrate as normal. If a weapon with this version of Armourbane also has the Blast special rule, measure the distance to the centre of the Blast marker after it has scattered. If this is half og the weapon's range or less, then all Hits are counted as having the Armourbane special rule, otherwise the Hits are resolved as if they did not have the Armourbane special rule.\n\n**Armourbane (Melee)**: A weapon or model with this version of the Armourbane special rule only gains the benefits of the Armourbane special rule when attacking in close combat.\n\n**Armourbane (Ranged)**: A weapon or model with this version of the Armourbane special rule only gains the benefits of the Armourbane special rule when making a Shooting attack.",
+    "source": "Age of Darkness Rulebook",
+    "page": 231,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Assault Vehicle",
+    "description": "Passengers Disembarking from Access Points on a Vehicle with this special rule can Charge on the turn they do so (including when forced to make an Emergency Disembarkation) unless the Vehicle arrived from reserves that turn.",
+    "source": "Age of Darkness Rulebook",
+    "page": 231,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Barrage",
     "description": "",
-    "source": "Main Rulebook",
-    "source-ref": 164,
+    "source": "Age of Darkness Rulebook",
+    "page": 232,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Battlesmith (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 233,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Battle-Hardened (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 233,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Blast",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 234,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Blind",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 236,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Bulky (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 236,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Chosen Warriors",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 236,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Concussive (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 236,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Counter-Attack (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 236,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Crawling Fire",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 236,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Crusader",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 236,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Cumbersome",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 237,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Deadly Cargo",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 237,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Deflagrate",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 237,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Deep Strike",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 237,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Duellist's Edge (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 237,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Eternal Warrior",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 237,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Exoshock (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 237,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Fear",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 238,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Fearless",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 238,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Feel No Pain",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 238,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Fleet (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 238,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Fleshbane",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 238,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Force",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 238,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Firing Protocols",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 239,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Furious Charge (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 239,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Gets Hot",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 239,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Graviton Pulse",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 239,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Hammer of Wrath (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 239,
     "version": 1,
     "errata": false
   }
