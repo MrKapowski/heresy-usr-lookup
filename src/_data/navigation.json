@@ -5,8 +5,16 @@
       "url": "/"
     },
     {
+      "text": "Index",
+      "url": "/rules/"
+    },
+    {
       "text": "About",
       "url": "/about/"
+    },
+    {
+      "text": "Issues",
+      "url": "https://github.com/MrKapowski/heresy-usr-lookup/issues"
     }
   ]
 }

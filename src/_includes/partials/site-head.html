@@ -1,9 +1,10 @@
 {% assign page_title = title | append: ' :: ' | append: site.name %} {% if
-site.name == title %} {% assign page_title = title %} {% endif %} {% assign
-site_title = site.name %} {% assign current_url = site.url | append: page.url %}
-{% unless social_image %} {% assign social_image = site.url | append:
-'/images/social-share.png' %} {% endunless %} {% if meta.title %} {% assign
-page_title = meta.title %} {% endif %}
+rule.name %} {% assign page_title = rule.name | append: ' :: ' | append:
+site.name %} {% endif %} {% if site.name == title %} {% assign page_title =
+title %} {% endif %} {% assign site_title = site.name %} {% assign current_url =
+site.url | append: page.url %} {% unless social_image %} {% assign social_image
+= site.url | append: '/images/social-share.png' %} {% endunless %} {% if
+meta.title %} {% assign page_title = meta.title %} {% endif %}
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

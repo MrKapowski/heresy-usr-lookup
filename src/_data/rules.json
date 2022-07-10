@@ -1,7 +1,7 @@
 [
   {
     "name": "Adamantium Will (X+)",
-    "description": "Models with the Adamantium Will special rule gain an Invulnerable Save against any Wound inflicted by a weapon with the Force or Psychic Focus special rules and Wounds inflicted by Perils of the Warp -- the value of this save is indicated in brakets after the rule.",
+    "description": "Models with the Adamantium Will special rule gain an Invulnerable Save against any Wound inflicted by a weapon with the Force or Psychic Focus special rules and Wounds inflicted by Perils of the Warp -- the value of this save is indicated in brakets after the rule. For example, a model with Adamantium Will (5+) gains a 5+ Invulnerable Save against any Wound inflicted with the Force or Psychic Focus special rules and Wounds inflicted by Perils of the Warp. If, for any reason, the Adamantium WIll special rule is presented without a value in brackets then consider the rule to be Adamantium Will (5+).",
     "source": "Age of Darkness Rulebook",
     "page": 231,
     "version": 1,
@@ -252,6 +252,382 @@
     "description": "",
     "source": "Age of Darkness Rulebook",
     "page": 239,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Hatred (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 240,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Haywire",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 240,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Hit & Run",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 240,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Independent Character",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 241,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Infiltrate",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 242,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Ignores Cover",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 242,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "It Will Not Die (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 242,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Lance",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 242,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Legiones Astartes (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 242,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Lingering Death",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 242,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Master-crafted",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 243,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Monster Hunter",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 243,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Move Through Cover",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 243,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Murderous Strike (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 243,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Night Vision",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 243,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "One Use/One Shot",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 243,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Outflank",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 244,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Pinning",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 244,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Poisoned (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 244,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Power of the Machine Spirit",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 244,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Precision Shots (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 244,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Precision Strikes (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 245,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Preferred Enemy (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 245,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Rad-phage",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 245,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Rage",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 245,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Rampage (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 245,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Relentless",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 245,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Rending (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 246,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Shell Shock (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 246,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Shred",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 246,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Scout",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 246,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Shrouded (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 247,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Pathfinder",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 247,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Skyfire",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 247,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Slow and Purposeful",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 247,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Sniper",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 247,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Specialist Weapon",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 247,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Sunder",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 247,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Strafing Run (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 248,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Stubborn",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 248,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Support Squad",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 248,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Swarm",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 248,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Template Weapons",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 248,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Torrent (X)",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 249,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Twin-linked",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 249,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Two-handed",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 249,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Unwieldy",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 249,
     "version": 1,
     "errata": false
   }

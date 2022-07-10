@@ -1,0 +1,42 @@
+{% layout "layouts/base.html" %} {% block content %}
+{% assign sortedRules = rules | sort: 'name' %}
+<div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <h1 class="text-2xl font-bold leading-tight text-gray-900">
+        {{ intro.title }}
+    </h1>
+</div>
+<div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <div class="py-8 leading-8 text-gray-600">
+        <p class="leading-6">{{ intro.desc }}</p>
+    </div>
+</div>
+<div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+    <nav class="flex justify-center">
+        {%- for rule in sortedRules -%}
+            {%- if rule.name[0] != indexLetter -%}
+            <a class="p-2 m-1 hover:underline underline-offset-2 hover:text-gray-800" href="#{{rule.name[0]}}">{{rule.name[0]}}</a>
+            {% assign indexLetter = rule.name[0] %}
+            {%- endif -%}
+        {%- endfor -%}
+    </nav>
+</div>
+<div class="mx-auto mb-8 max-w-2xl px-4 sm:px-6 lg:px-8">
+    
+    {% assign isFirst = true %}
+    {%- for rule in sortedRules -%}
+    {%- if rule.name[0] != currentLetter -%}
+        {%- if isFirst != true -%}
+    <!-- prettier-ignore -->
+    
+    </ul>
+        {%- endif %}
+    <h2 class="text-3xl font-bold text-gray-600 mt-4 mb-2" id="{{rule.name[0]}}">{{ rule.name[0] }}</h2>
+    <ul>
+        {% assign isFirst = false %}
+    {%- endif -%}
+        <li class="flex justify-between"><a class="text-xl hover:underline underline-offset-2 text-gray-800" href="/rule/{{rule.name | slug }}/">{{rule.name}}</a><span><cite>{{rule.source}}</cite>, page {{rule.page}}</span></li>
+    {% assign currentLetter = rule.name[0] %}
+    {%- endfor -%}
+    </ul>
+</div>
+{% endblock %}

@@ -19,6 +19,11 @@ module.exports = function (config) {
   config.addFilter('markdown', function (rawString) {
     return mdRender.render(rawString);
   });
+  config.addFilter('sortRules', function (arr) {
+    return arr.sort((first, second) => {
+      return first.name < second.name ? -1 : first.name > second.name ? 1 : 0;
+    });
+  });
 
   return {
     dir: {

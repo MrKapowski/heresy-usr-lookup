@@ -27,6 +27,17 @@
         </div>
       </div>
     </div>
+    <div
+      class="mx-auto mb-8 max-w-2xl text-center text-sm italic text-gray-500"
+    >
+      <span>
+        Showing
+        <span x-text="(sortedRules()).length"></span>
+        of
+        <span x-text="rules.length"></span>
+        Rules
+      </span>
+    </div>
     <template x-for="rule in sortedRules()">
       <article x-bind:id="rule.id" class="mx-auto mb-16 max-w-2xl">
         <div class="px-4 sm:px-6 lg:px-8">
@@ -35,34 +46,53 @@
             x-text="rule.name"
           ></h1>
         </div>
-        <div class="px-4 sm:px-6 lg:px-8">
-          Source:
-          <cite x-text="rule.source"></cite>, page
-          <span x-text="rule.page"></span>
+        <div class="flex px-4 text-gray-600 sm:px-6 lg:px-8">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="mr-2 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+            />
+          </svg>
+          <span>
+            <cite x-text="rule.source"></cite>, page
+            <span x-text="rule.page"></span>
+          </span>
         </div>
         <div class="px-4 text-gray-500 sm:px-6 lg:px-8">
           <div
-            class="prose prose-lg my-4 border-t py-8 leading-8 text-gray-600"
+            class="prose prose-lg my-4 border-t py-8 pb-4 leading-8 text-gray-800"
             x-html="rule.description"
           ></div>
           <div class="flex">
-            <a x-bind:href="rule.link">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
-              </svg>
-            </a>
-            <span class="mx-4"
-              >Rule version: <span x-text="rule.version"></span>.</span
-            >
-            <span>
+            <span>Rule version: <span x-text="rule.version"></span>.</span>
+            <span class="mx-4">
               FAQ/Errata?
               <span x-text="rule.errata ? 'Yes' : 'No'"></span>
             </span>
+            <a x-bind:href="rule.link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </article>
@@ -74,7 +104,7 @@
     return {
       rules: [],
       loading: false,
-      source: '/rules.json',
+      sources: ['/rules.json'],
       search: null,
       sortedRules() {
         const sorted = this.rules.sort((first, second) => {
@@ -87,7 +117,7 @@
         if (this.search) {
           console.log(`search: ${this.search}`);
           return sorted.filter((item) =>
-            item.name.toLowerCase().startsWith(this.search.toLowerCase()),
+            item.name.toLowerCase().includes(this.search.toLowerCase()),
           );
         }
         return sorted;
@@ -98,11 +128,13 @@
           .then((res) => res.json())
           .then((data) => {
             this.loading = false;
-            this.rules = data;
+            this.rules = [].concat(data);
           });
       },
       init() {
-        this.get(this.source);
+        this.sources.forEach((source) => {
+          this.get(source);
+        });
       },
     };
   }
