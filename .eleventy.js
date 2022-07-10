@@ -13,8 +13,11 @@ module.exports = function (config) {
   config.addPassthroughCopy('./src/main.js');
 
   const mdRender = new MarkdownIt();
-  config.addFilter('md', function (rawString) {
+  config.addFilter('mdDescription', function (rawString) {
     return JSON.stringify(mdRender.render(rawString));
+  });
+  config.addFilter('markdown', function (rawString) {
+    return mdRender.render(rawString);
   });
 
   return {

@@ -6,8 +6,8 @@ permalink: rules.json
     {
         "id":"{{rule.name | slugify}}",
         "name":"{{ rule.name }}",
-        "description":{{ rule.description | md }},
-        "link":"/rules/{{rule.name | slugify}}/",
+        "description":{{ rule.description | mdDescription }},
+        "link":"/rules/{{rule.name | slug }}/",
         "source":"{{rule.source}}",
         "page":{{rule.page}},
         "version":{{rule.version}},
