@@ -1,4 +1,5 @@
 const fs = require('fs');
+const htmlmin = require('html-minifier');
 const MarkdownIt = require('markdown-it');
 
 module.exports = function (config) {
@@ -23,6 +24,23 @@ module.exports = function (config) {
     return arr.sort((first, second) => {
       return first.name < second.name ? -1 : first.name > second.name ? 1 : 0;
     });
+  });
+
+  config.addTransform('htmlmin', function (content, outputPath) {
+    if (
+      process.env.ELEVENTY_ENV == 'production' &&
+      outputPath &&
+      outputPath.endsWith('.html')
+    ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+      return minified;
+    }
+
+    return content;
   });
 
   return {
