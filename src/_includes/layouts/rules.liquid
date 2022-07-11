@@ -11,7 +11,7 @@
     </div>
 </div>
 <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-    <nav class="flex justify-center">
+    <nav class="flex flex-wrap justify-center">
         {%- for rule in sortedRules -%}
             {%- if rule.name[0] != indexLetter -%}
             <a class="p-2 m-1 hover:underline underline-offset-2 hover:text-gray-800" href="#{{rule.name[0]}}">{{rule.name[0]}}</a>
@@ -34,7 +34,7 @@
     <ul>
         {% assign isFirst = false %}
     {%- endif -%}
-        <li class="flex justify-between"><a class="text-xl hover:underline underline-offset-2 text-gray-800" href="/rule/{{rule.name | slug }}/">{{rule.name}}</a><span><cite>{{rule.source}}</cite>, page {{rule.page}}</span></li>
+        <li class="flex flex-wrap shrink-0 mr-4 justify-between"><a class="text-xl hover:underline underline-offset-2 text-gray-800" href="/rule/{{rule.name | slug }}/">{{rule.name}}</a><span><cite>{{rule.source}}</cite>, page {{rule.page}}</span></li>
     {% assign currentLetter = rule.name[0] %}
     {%- endfor -%}
     </ul>
