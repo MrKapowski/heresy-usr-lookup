@@ -23,7 +23,7 @@
   "scripts": {
     "watch-css": "npx tailwindcss -i ./src/styles/main.css -o ./_site/styles/main.css -w",
     "watch-js": "npx esbuild ./src/main.js --outfile=./_site/main.js --bundle --target=es2018 --watch",
-    "start": "NODE_ENV=development concurrently \"node hash\"  \"ELEVENTY_ENV=development eleventy --serve\"  \"npm:watch-*\"",
+    "start": "npm run clean && NODE_ENV=development concurrently \"node hash\"  \"ELEVENTY_ENV=development eleventy --serve\"  \"npm:watch-*\"",
     "build-css": "npx tailwindcss -i ./src/styles/main.css -o ./_site/styles/main.css --minify",
     "build-js": "npx esbuild ./src/main.js --outfile=./_site/main.js  --bundle --target=es2018 --minify",
     "build": "npm run clean && cross-env NODE_ENV=production concurrently \"npm:build-*\" && node hash && ELEVENTY_ENV=production eleventy",

@@ -1,4 +1,3 @@
-const fs = require('fs');
 const htmlmin = require('html-minifier');
 const MarkdownIt = require('markdown-it');
 
@@ -19,11 +18,6 @@ module.exports = function (config) {
   });
   config.addFilter('markdown', function (rawString) {
     return mdRender.render(rawString);
-  });
-  config.addFilter('sortRules', function (arr) {
-    return arr.sort((first, second) => {
-      return first.name < second.name ? -1 : first.name > second.name ? 1 : 0;
-    });
   });
 
   config.addTransform('htmlmin', function (content, outputPath) {

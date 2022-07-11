@@ -1,36 +1,27 @@
 ---
-layout: 'layouts/home.html'
-title: 'Home'
+layout: 'layouts/about.html'
+title: 'About'
 meta:
-  desc:
-    '11st-Starter-Kit is a minimal starting point for building static websites
-    with 11ty, powered by Vite with Tailwind CSS and Alpine.js.'
+  desc: 'Information about the Horus Heresy USR Lookup site, including the changelog'
 intro:
-  title: 'Get Yours'
-  desc:
-    'Clone and deploy your own <span class="text-gray-900 font-semibold">11st
-    Starter-Kit</span> starter template.'
+  title: 'What Is This?'
+  desc: 'Basically: I got tired of seeing a reference to a USR in a weapon profile or unit rule, looking for it in Big Hefty Book A, only to go "oh, hang on, it is not in this book - it must be in Big Hefty Book B! That *is* inconvenient 😐". So I built this site to be both a <a href="/rules/" class="bold hover:underline underline-offset-2 text-gray-800">consolidated index</a> and a <a href="/" class="bold hover:underline underline-offset-2 text-gray-800">quick lookup tool</a>.'
 ---
 
-## Hosting
+Needless to say, this fan site is 100% unofficial, not endorsed by Games Workshop, and remains online only by their good graces (as well as that of their Legal Eagles). No claim is made over Games Workshop's copyrights, trademarks, or IP. This project is run for primarily my own benefit (read: laziness), and does not ask for or accept donations, payment, or other funding of any kind.
 
-This site is deployed by, and hosted by [Netlify](https://www.netlify.com/). 
+If you do stumble across this site, and find it useful, you can find me in other parts of the internet:
 
-<p class="flex items-center m-0">
-  Latest deploy status:
-  <a href="https://app.netlify.com/sites/11st-starter-kit/deploys" class="ml-2">
-    <img
-      src="https://api.netlify.com/api/v1/badges/ec6da587-72ba-490a-ad4b-167802a9c197/deploy-status"
-      style="margin: 0"
-      alt="Netlify Status"
-    />
-  </a>
-</p>
+- **[@MstrKapowski on Twitter](https://twitter.com/mstrkapowski)**
+- **[My infrequently updated hobby blog](https://worldsinminiature.com/)**
 
-## One-click deploy
-To get your own instance of this [Eleventy](https://11ty.io) starter project
-cloned and deploying to [Netlify](https://www.netlify.com) very quickly, just
-click the button below and follow the instructions.
+## Changelog
 
-[![Deploy to Netlify](/images/deploy-to-netlify.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stefanfrede/11st-starter-kit)
+### v0.1-alpha
 
+- Initial site design
+- First-draft of the lookup function (names only)
+- Loading rule names and page references from the _Age of Darkness Rulebook_
+- Start loading USR rule text
+
+If you find any issues with the site, you can <a href="https://github.com/MrKapowski/heresy-usr-lookup/issues" rel="noopener noreferrer" class="bold hover:underline underline-offset-2 text-gray-800">raise an issue over on GitHub</a>.
