@@ -216,7 +216,7 @@
     "errata": false
   },
   {
-    "name": "Firing Protocols",
+    "name": "Firing Protocols (X)",
     "description": "",
     "source": "Age of Darkness Rulebook",
     "page": 239,
@@ -241,6 +241,14 @@
   },
   {
     "name": "Graviton Pulse",
+    "description": "",
+    "source": "Age of Darkness Rulebook",
+    "page": 239,
+    "version": 1,
+    "errata": false
+  },
+  {
+    "name": "Guided Fire",
     "description": "",
     "source": "Age of Darkness Rulebook",
     "page": 239,
