@@ -85,7 +85,7 @@
   },
   "dependencies": {
     "alpinejs": "^3.0.1",
-    "concurrently": "^7.2.2",
+    "concurrently": "^7.3.0",
     "core-js": "^3.20.2",
     "cssnano": "^5.1.12",
     "html-minifier": "^4.0.0",
