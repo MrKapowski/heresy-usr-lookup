@@ -41,4 +41,10 @@ export default () => ({
       this.get(source);
     });
   },
+  shouldShow(name) {
+    return (
+      this.search !== '' &&
+      name.toLowerCase().includes(this.search.toLowerCase())
+    );
+  },
 });
