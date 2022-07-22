@@ -26,7 +26,7 @@
     "start": "npm run clean && NODE_ENV=development concurrently \"ELEVENTY_ENV=development eleventy --serve\"  \"npm:watch-*\"",
     "build-css": "npx tailwindcss -i ./src/styles/main.css -o ./_site/styles/main.css --minify",
     "build-js": "npx esbuild ./src/main.js --outfile=./_site/main.js  --bundle --target=es2018 --minify",
-    "build": "npm run clean && cross-env NODE_ENV=production concurrently \"npm:build-*\" && ELEVENTY_ENV=production eleventy",
+    "build": "npm run clean && cross-env NODE_ENV=production concurrently ELEVENTY_ENV=production eleventy && \"npm:build-*\" ",
     "clean": "rimraf _site",
     "prepare": "npx husky install",
     "predev": "run-s clean",

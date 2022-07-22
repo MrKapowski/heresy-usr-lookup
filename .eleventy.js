@@ -9,8 +9,8 @@ module.exports = function (config) {
   // Static assets to pass through
   config.addPassthroughCopy('./src/images');
   config.addPassthroughCopy('./src/public');
-  config.addPassthroughCopy('./src/styles');
-  config.addPassthroughCopy('./src/main.js');
+  //config.addPassthroughCopy('./src/styles');
+  //config.addPassthroughCopy('./src/main.js');
 
   const mdRender = new MarkdownIt();
   config.addFilter('mdDescription', function (rawString) {
