@@ -40,3 +40,8 @@ meta.title %} {% assign page_title = meta.title %} {% endif %}
 
 <link rel="stylesheet" href="{{ hash['/styles/main.css'] | url }}" />
 <script defer src="{{ hash['/main.js'] | url }}"></script>
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+</style>

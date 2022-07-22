@@ -4,44 +4,41 @@
     <h1 class="text-2xl font-bold leading-tight text-gray-900">
       {{ intro.title }}
     </h1>
-  </div>
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-    <div class="py-8 leading-8 text-gray-600">
-      <p class="leading-6">{{ intro.desc }}</p>
-    </div>
+    <p class="py-8 leading-6 text-gray-600">{{ intro.desc }}</p>
   </div>
 
-  <div x-data="setup()" x-init="init">
-    <div class="flex justify-center">
-      <div class="mb-3 xl:w-96">
+  <div x-data="theApp()" x-cloak>
+    <div
+      class="mx-auto flex max-w-2xl flex-col justify-center px-4 sm:px-6 lg:px-8"
+    >
+      <div class="mb-3 w-full">
         <div
           class="input-group relative mb-4 flex w-full flex-wrap items-stretch"
         >
           <input
             type="search"
-            class="form-control relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-blue-600 focus:bg-white focus:text-gray-700 focus:outline-none"
+            class="form-control relative m-0 block w-full min-w-0 flex-auto rounded border border-solid border-gray-300 bg-white bg-clip-padding px-3 py-1.5 text-base font-normal text-gray-700 transition ease-in-out focus:border-gray-600 focus:bg-white focus:text-gray-700 focus:outline-none"
             placeholder="Type to filter"
             aria-label="Search"
-            x-model="search"
+            x-model="$data.search"
           />
         </div>
       </div>
-    </div>
-    <div
-      class="mx-auto mb-8 max-w-2xl text-center text-sm italic text-gray-500"
-    >
-      <span>
+      <p class="mx-auto mb-4">
         Showing
-        <span x-text="(sortedRules()).length"></span>
+        <span x-text="results"></span>
         of
         <span x-text="rules.length"></span>
         Rules
-      </span>
+      </p>
     </div>
-    <template x-for="rule in sortedRules()">
+    <div x-show="error !== ''" x-text="error"></div>
+    <template x-for="rule in rules" x-cloak :key="rule.id">
       <article
         x-bind:id="rule.id"
         class="mx-auto mb-16 max-w-2xl px-4 sm:px-6 lg:px-8"
+        x-show="search !== '' && rule.name.toLowerCase().includes(search.toLowerCase())"
+        x-transition
       >
         <h1
           class="text-3xl font-bold leading-tight text-gray-900"
@@ -77,7 +74,10 @@
             FAQ/Errata?
             <span x-text="rule.errata ? 'Yes' : 'No'"></span>
           </span>
-          <a x-bind:href="rule.link">
+          <a
+            x-bind:href="rule.link"
+            x-bind:aria-label="`bookmark for the '${rule.name}' rule`"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
@@ -98,44 +98,4 @@
     </template>
   </div>
 </main>
-<script>
-  function setup() {
-    return {
-      rules: [],
-      loading: false,
-      sources: ['/rules.json'],
-      search: null,
-      sortedRules() {
-        const sorted = this.rules.sort((first, second) => {
-          return first.name < second.name
-            ? -1
-            : first.name > second.name
-            ? 1
-            : 0;
-        });
-        if (this.search) {
-          console.log(`search: ${this.search}`);
-          return sorted.filter((item) =>
-            item.name.toLowerCase().includes(this.search.toLowerCase()),
-          );
-        }
-        return sorted;
-      },
-      get(source) {
-        this.loading = true;
-        const request = fetch(source)
-          .then((res) => res.json())
-          .then((data) => {
-            this.loading = false;
-            this.rules = [].concat(data);
-          });
-      },
-      init() {
-        this.sources.forEach((source) => {
-          this.get(source);
-        });
-      },
-    };
-  }
-</script>
 {% endblock %}
